@@ -1,0 +1,36 @@
+
+---
+import Link from "@components/ui/link.astro";
+import { localizePath } from "astro-i18next";
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import { t } from "i18next";
+
+const features = [
+	
+];
+---
+
+<div class="relative mx-auto max-w-5xl px-6 lg:px-8">
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.subtitle")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white"><a href="/" class="group">{t("hero.tiktokio")}</a> {t("features.titlepg")}</p>
+	</div>
+	<ul class="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
+      		<li class="rounded-xl bg-white px-6 py-2 shadow-sm"><a href="/" class="group"><img src="/images/video.svg" alt="download tiktok videos" class="mx-auto h-10 w-10"><p class="my-3 font-display font-medium">Download Tiktok Videos</p></a></li>
+	        <li class="rounded-xl bg-white px-6 py-2 shadow-sm"><a href="/" class="group"><img src="/images/image.svg" alt="download tiktok photos" class="mx-auto h-10 w-10"><p class="my-3 font-display font-medium">Download Tiktok photos</p></a></li>
+		<li class="rounded-xl bg-white px-6 py-2 shadow-sm"><a href="/" class="group"><img src="/images/playlist.svg" alt="download tiktok mp3" class="mx-auto h-10 w-10"><p class="my-3 font-display font-medium">Download Tiktok MP3</p></a></li>
+	</ul>
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.title")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.description")} <a href="/" class="group">{t("header.tvd")}</a> {t("features.descriptions")}</p>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.description1")}</p>
+	</div>
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.description_title")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.heading2_des1")}</p>
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.heading2")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.heading2_des2")}</p>
+	</div>
+	
+</div>

@@ -1,0 +1,208 @@
+---
+import Link from "@components/ui/link.astro";
+import { localizePath } from "astro-i18next";
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import { t } from "i18next";
+---
+
+
+
+<div class="relative mx-auto max-w-5xl px-6 lg:px-8">
+
+<!-- section 1 Started -->
+
+	<section class="relative">
+				<!-- Container -->
+				<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+					<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.howto")} <span class="bg-[url('/images/rectangle-bg.svg')] bg-cover bg-center px-4 text-white">{t("features.wowm")}</span></h2>
+					<p class="text-center mt-6 text-lg leading-8 text-gray-900 dark:text-gray-100">{t("features.howtotext")}</p>
+
+				</div>
+		<div class="mx-auto w-full max-w-7xl px-5 py-12 md:px-10 md:py-10 lg:py-12">
+				<!-- Component -->
+			<div class="grid grid-cols-1 items-center gap-12 sm:gap-20 lg:grid-cols-2">
+				<!-- Image Div -->
+				<div class="relative left-4 h-full max-h-[460px] w-[100%] md:left-0 md:w-[100%] lg:w-full">
+					<img src="/images/tiktokio-search.avif" alt="Search the TikTok Video" class="mx-auto block h-full rounded-2xl object-cover" />
+
+				</div>
+				<!-- Heading Div -->
+				<div class="max-w-[720px] lg:max-w-[842px]">
+					<h3 class="mb-4 text-3xl font-bold md:text-2xl">{t("features.title_search")} <span class="bg-[url('/images/rectangle-bg.svg')] bg-cover bg-center px-4 text-white">{t("features.title_search_tiktok")}</span> {t("features.title_copy_tiktok")}</h3>
+					<p class="mb-6 max-w-[480px] text-[#636262] md:mb-10 lg:mb-12">{t("features.search_text")}</p> 
+					<a href="" class="inline-block rounded-xl bg-black px-8 py-4 text-center font-semibold text-white [box-shadow:rgb(233,_109,_29)_6px_6px]">Get Started</a>
+				</div>
+			</div>
+		</div>
+
+
+				</section>
+<!-- section 1 End -->
+
+<!-- section 2 Started -->
+	
+	<section class="relative">
+				<!-- Container -->
+		<div class="mx-auto w-full max-w-7xl px-5 py-12 md:px-10 md:py-10 lg:py-12">
+				<!-- Component -->
+			<div class="grid grid-cols-1 items-center gap-12 sm:gap-20 lg:grid-cols-2">
+				<!-- Heading Div -->
+				<div class="max-w-[720px] lg:max-w-[842px]">
+					<h3 class="mb-4 text-3xl font-bold md:text-2xl">{t("features.link_paste")} <span class="bg-[url('/images/rectangle-bg.svg')] bg-cover bg-center px-4 text-white">{t("features.title_search_tiktok")}</span>{t("features.linkpaste")}</h3>
+					<p class="mb-6 max-w-[480px] text-[#636262] md:mb-10 lg:mb-12">{t("features.paste_text")} <a href="/" class="group">{t("features.paste_link")}</a> {t("features.paste_text1")}</p>
+					<a href="#" class="inline-block rounded-xl bg-black px-8 py-4 text-center font-semibold text-white [box-shadow:rgb(233,_109,_29)_6px_6px]">Get Started</a>
+				</div>      
+				<!-- Image Div -->
+				<div class="relative left-4 h-full max-h-[460px] w-[100%] md:left-0 md:w-[100%] lg:w-full">
+					<img src="/images/tiktokio-sbs.avif" alt="Paste link in Tiktokio.cam" class="mx-auto block h-full rounded-2xl object-cover" />
+					
+				</div>
+      
+			</div>
+		</div>
+				</section>
+<!-- section 2 End -->
+
+<!-- section 3 Started -->
+
+
+	<section class="relative">
+				<!-- Container -->
+		<div class="mx-auto w-full max-w-7xl px-5 py-12 md:px-10 md:py-10 lg:py-12">
+				<!-- Component -->
+			<div class="grid grid-cols-1 items-center gap-12 sm:gap-20 lg:grid-cols-2">
+				<!-- Image Div -->
+				<div class="relative left-4 h-full max-h-[460px] w-[100%] md:left-0 md:w-[100%] lg:w-full">
+					<img src="/images/tiktkio-format.webp" alt="Download tiktok video in mp4 format" class="mx-auto block h-full rounded-2xl object-cover" />
+					
+				</div>
+				<!-- Heading Div -->
+				<div class="max-w-[720px] lg:max-w-[842px]">
+					<h3 class="mb-4 text-3xl font-bold md:text-2xl">{t("features.select_format")} <span class="bg-[url('/images/rectangle-bg.svg')] bg-cover bg-center px-4 text-white">{t("features.format_down")}</span></h3>
+					<p class="mb-6 max-w-[480px] text-[#636262] md:mb-10 lg:mb-12">{t("features.formate_text")} <a href="/" class="group">{t("features.format_text_link")}</a> {t("features.formate_text2")}</p>
+					<a href="#" class="inline-block rounded-xl bg-black px-8 py-4 text-center font-semibold text-white [box-shadow:rgb(233,_109,_29)_6px_6px]">Get Started</a>
+				</div>
+			</div>
+		</div>
+				</section>
+<!-- section 3 End -->
+
+<!-- Why do I need an active TikTok Downloader? Start -->
+
+				<div class="mx-auto py-12 lg:text-center">
+					<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.whydo")}</h2>
+					<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-gray-100">{t("features.whydo_text")}</p>
+					<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-gray-100">{t("features.whydo_text1")} <strong><a href="/" class="group">{t("features.whydo_link")}</a></strong> {t("features.formate_text2")}</p>
+					<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-gray-100">{t("features.whydo_text2")}</p>
+					<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.simple")}</h2>
+					<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-gray-100">{t("features.simple_text")}</p>
+				</div>
+
+
+<!-- Why do I need an active TikTok Downloader? End -->
+
+
+<!-- section 4 Start -->
+
+	<section>
+				<!-- Container -->
+		<div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-12 lg:py-12">
+				<!-- Component -->
+			<div class="grid grid-cols-1 items-center gap-12 sm:gap-20 lg:grid-cols-2">
+				<!-- Image Div -->
+				<div class="relative left-4 h-full max-h-[460px] w-[100%] md:left-0 md:w-[100%] lg:w-full">
+					<img src="/images/tiktokio-android.avif" alt="Tiktokio smartphone" class="mx-auto block h-full rounded-2xl object-cover" />
+					
+				</div>
+				<!-- Heading Div -->
+			<div class="max-w-[720px] max-[991px]:[grid-area:1/1/2/2] lg:max-w-[842px]">
+				<!-- Heading Text -->
+				<div>
+					<h3 class="mb-4 text-3xl font-bold md:text-2xl">{t("features.procedure")} <span class="bg-[url('/images/rectangle-bg.svg')] bg-cover bg-center bg-no-repeat px-4 text-white">{t("features.proc_1")}</span>{t("features.proc_2")}</h3>
+					<p class="max-w-[480px] text-[#636262]">{t("features.procedure_text")}</p>
+				</div>
+        		<!-- Divider -->
+        		<div class="mb-12 mt-12 h-0 w-40 border">
+				</div>
+        		<!-- Features -->
+				<div class="flex flex-col items-start">
+					<!-- Item -->
+					<div class="mb-2 flex items-center">
+            			<img src="images/check-mark-circle.svg" alt="download tiktok video on smartphone_1" class="mr-2 inline-block h-4 w-4" />
+            			<p class="mb-2 text-sm text-gray-900">{t("features.ph_step1")}</p>
+					</div>
+					<!-- Item -->
+					<div class="mb-2 flex items-center">
+            			<img src="images/check-mark-circle.svg" alt="download tiktok video on smartphone_2" class="mr-2 inline-block h-4 w-4" />
+            			<p class="mb-2 text-sm text-gray-900">{t("features.ph_step2")}</p>
+					</div>
+          			<!-- Item -->
+					<div class="mb-2 flex items-center">
+            			<img src="images/check-mark-circle.svg" alt="download tiktok video on smartphone_3" class="mr-2 inline-block h-4 w-4" />
+            			<p class="mb-2 text-sm text-gray-900">{t("features.ph_step3")} <strong><a href="/" class="group">{t("features.site_name")}</a></strong></p>
+					</div>
+          			<!-- Item -->
+					<div class="flex items-center">
+            			<img src="images/check-mark-circle.svg" alt="download tiktok video on smartphone_4" class="mr-2 inline-block h-4 w-4" />
+            			<p class="mb-2 text-sm text-gray-900">{t("features.ph_step4")}</p>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	
+<!-- section 4 End -->
+
+
+
+
+<!-- section 5 Start -->
+
+	<section class="relative">
+				<!-- Container -->
+		<div class="mx-auto w-full max-w-7xl px-5 py-12 md:px-10 md:py-10 lg:py-12">
+				<!-- Component -->
+			<div class="grid grid-cols-1 items-center gap-12 sm:gap-20 lg:grid-cols-2">
+				<!-- Heading Div -->
+				<div class="max-w-[720px] lg:max-w-[842px]">
+					<h3 class="mb-4 text-3xl font-bold md:text-2xl">{t("features.prcdr_ios")} <span class="bg-[url('/images/rectangle-bg.svg')] bg-cover bg-center px-4 text-white">{t("features.ios_1")}</span>{t("features.ios_2")}</h3>
+					<p class="mb-6 max-w-[480px] text-[#636262] md:mb-10 lg:mb-12">{t("features.procedure_ios_text")}</p>
+					<div class="mb-12 mt-12 h-0 w-40 border">
+					</div>
+					<!-- Features -->
+					<div class="flex flex-col items-start">
+						<!-- Item -->
+						<div class="mb-2 flex items-center">
+							<img src="images/check-mark-circle.svg" alt="download tiktok video on ios_1" class="mr-2 inline-block h-4 w-4" />
+							<p class="mb-2 text-sm text-gray-900">{t("features.ios_step1")}</p>
+						</div>
+						<!-- Item -->
+						<div class="mb-2 flex items-center">
+							<img src="images/check-mark-circle.svg" alt="download tiktok video on ios_2" class="mr-2 inline-block h-4 w-4" />
+							<p class="mb-2 text-sm text-gray-900">{t("features.ios_step2")} <strong><a href="/" class="group">{t("features.site_name")}</a></strong> {t("features.ios_step3")}</p>
+						</div>
+						<!-- Item -->
+						<div class="mb-2 flex items-center">
+							<img src="images/check-mark-circle.svg" alt="download tiktok video on ios_3" class="mr-2 inline-block h-4 w-4" />
+							<p class="mb-2 text-sm text-gray-900">{t("features.ios_step4")} </p>
+						</div>
+						<!-- Item -->
+						<div class="mb-2 flex items-center">
+							<img src="images/check-mark-circle.svg" alt="download tiktok video on ios_4" class="mr-2 inline-block h-4 w-4" />
+							<p class="mb-2 text-sm text-gray-900">{t("features.ios_step5")} </p>
+						</div>
+					</div>
+				</div>      
+
+				<!-- Image Div -->
+					<div class="relative left-4 h-full max-h-[460px] w-[100%] md:left-0 md:w-[100%] lg:w-full">
+						<img src="/images/iphone-ipad.avif" alt="download tiktok video on ios_ipad" class="mx-auto block h-full rounded-2xl object-cover" />
+						
+					</div>
+			</div>
+		</div>
+				</section>
+<!-- section 5 End -->
+</div>

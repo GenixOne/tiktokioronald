@@ -1,0 +1,114 @@
+---
+const { plan } = Astro.props;
+import { t } from "i18next";
+
+const faqs = [
+	{
+		title: "What is TikTokio Downlaoder?",
+		description: "TikTokio is an entirely free online Tiktok downloader and users can download TikTok videos on their concerned devices in HD quality and without a watermark with a couple of clicks. Moreover, users can also convert their favorite TikTok videos into MP3 files.",
+	},
+	{
+		title: "How to get the TikTok video download link?",
+		description: "Get the TikTok app open. Select the TikTok video you wish to download, click Share, and then locate the Copy Link button under the Share options. The clipboard is ready for your download URL. For example, the link would look like this https://v.douyin.com/UFLNjnh/ or https://www.tiktok.com/@philandmore/video/6805867805452324102 or https://m.tiktok.com/v/6805867805452324102.html and more...",
+	},
+	{
+		title: "Is installing extensions necessary in order to utilize the Tik Tok Downloader?",
+		description: "Not at all. All you need is a link to start the TikTok video download process and get rid of the TikTok watermark online. Copy it into the input field, then choose the conversion format. The rest will be handled by our TikTok watermark eradication tool."
+	},
+	{
+		title: "After they are downloaded where are TikTok files saved?",
+		description:
+			"The default place is typically where files saved from TikTok without trademarks end up. You can manually choose and modify the destination folder for your files in your browser's settings.",
+	},
+	{
+		title: "Is a TikTok account required in order to download videos from TikTok?",
+		description: "No a TikTok account is not required. With just a link, you may start the TikTok sans watermark download procedure. Just click the Download button after pasting it into the input area at the top of the page. In a matter of seconds, the video will be usable when the watermark is removed by our TikTok download service."
+	},
+	{
+		title: "Is TikTok downloader safe?",
+		description:
+			"Totally safe we do not ask any information from users. You just need to copy the video link to the toolbar and download it at Tiktokio.",
+	},
+	{
+		title:
+			"When I download my video, where is it saved?",
+		description: "On PCs and Android mobile devices, videos are typically saved in the Downloads folder."
+	},
+	{
+		title: "Is the TikTok Downloader Compatible with All Devices?",
+		description: "Yes our TikTok video downloader works perfectly on a wide range of devices, such as personal computers PCs, smartphones Android or iOS, tablets, and iPads. Hence, you’re able to download TikTok videos without watermarks on any device you like."
+	},
+	{
+		title: "Does TikTokio offer unlimited TikTok video downloads?",
+		description: "Yes, there is no limit to downloading Tiktok videos without a watermark."
+	},
+	{
+		title: "Does TikTokio charge money for downloading TikTok Video content without a watermark?",
+		description: "No, you will not have to pay any money. Without a watermark, all users can download TikTok videos for free."
+	},
+];
+---
+
+
+
+
+
+
+<div class="mx-auto max-w-5xl px-6 py-24 sm:py-36 lg:px-8 lg:py-12 dark:bg-stone-950">
+	<div class="mx-auto divide-y divide-gray-900/10 dark:divide-gray-100/10">
+		<h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">{t("faq.title")}</h2>
+		<dl class="mt-10 space-y-6 divide-y divide-gray-900/10 dark:divide-gray-100/10">
+			{
+				faqs.map((faq) => (
+					<div class="pt-6" x-data="{ open: false }">
+						<dt>
+							<button
+								type="button"
+								class="flex w-full items-start justify-between text-left text-gray-900 dark:text-white"
+								@click="open = !open"
+								:x-bind:aria-expanded="open.toString()">
+								<span class="text-base font-semibold leading-7">{faq.title}</span>
+								<span class="ml-6 flex h-7 items-center">
+									<svg
+										class="h-6 w-6"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										aria-hidden="true"
+										x-show="!open">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+									</svg>
+									<svg
+										class="h-6 w-6"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										aria-hidden="true"
+										x-show="open">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"></path>
+									</svg>
+								</span>
+							</button>
+						</dt>
+						<dd
+							x-transition:enter="transition ease-out duration-100"
+							x-transition:enter-start="opacity-0 transform scale-90"
+							x-transition:enter-end="opacity-100 transform scale-100"
+							x-transition:leave="transition ease-in duration-100"
+							x-transition:leave-start="opacity-100 transform scale-100"
+							x-transition:leave-end="opacity-0 transform scale-90"
+							class="mt-2 pr-12"
+							id="faq-0"
+							x-show="open">
+							<span class="text-base leading-7 text-gray-600 dark:text-gray-100">
+								<span set:html={faq.description}></span>
+							</span>
+						</dd>
+					</div>
+				))
+			}
+		</dl>
+	</div>
+</div>

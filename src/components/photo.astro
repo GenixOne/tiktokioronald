@@ -1,0 +1,50 @@
+
+---
+import Link from "@components/ui/link.astro";
+import { localizePath } from "astro-i18next";
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import { t } from "i18next";
+
+const photo = [
+	
+];
+---
+
+<div class="relative mx-auto max-w-5xl px-6 lg:px-8">
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.subtitle")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white"><a href="/" class="group">{t("hero.tiktokio")}</a> {t("features.titlepg")}</p>
+	</div>
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.title_mp3_down")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.tiktok_mp3_text1")} <a href="/tiktok-mp3" class="group">{t("features.title_mp3_downloader")}</a> {t("features.tiktok_mp3_text2")}</p>
+	</div>
+	<ul class="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
+      		<li class="rounded-xl bg-white px-6 py-2 shadow-sm"><a href="/" class="group"><img src="/images/video.svg" alt="tiktokio video" class="mx-auto h-10 w-10"><p class="my-3 font-display font-medium">Download Tiktok Videos</p></a></li>
+	        <li class="rounded-xl bg-white px-6 py-2 shadow-sm"><a href="/" class="group"><img src="/images/image.svg" alt="tiktok photos" class="mx-auto h-10 w-10"><p class="my-3 font-display font-medium">Download Tiktok photos</p></a></li>
+		<li class="rounded-xl bg-white px-6 py-2 shadow-sm"><a href="/" class="group"><img src="/images/playlist.svg" alt="mp3 playlist" class="mx-auto h-10 w-10"><p class="my-3 font-display font-medium">Download Tiktok MP3</p></a></li>
+	</ul>
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.title")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.description")} <a href="/" class="group">{t("header.tvd")}</a> {t("features.descriptions")}</p>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.description1")}</p>
+	</div>
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.description_title")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.heading2_des1")} <a href="/" class="group">{t("features.format_text_link")}</a> {t("features.heading2_des1_1")}</p>
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.heading2")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.heading2_des2")}</p>
+
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.title_photo_down")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.tiktok_photo_text1")} <a href="/download-tiktok-photo" class="group">{t("features.title_photo_downloader")}</a> {t("features.tiktok_photo_text2")} <a href="/download-tiktok-photo" class="group">{t("features.title_photo_downloader")}</a></p>
+
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.title_story_down")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.tiktok_story_text1")} <a href="/tiktok-story-downloader" class="group">{t("features.title_story_link")}</a> {t("features.tiktok_story_text2")}</p>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.tiktok_story_text3")} <a href="/tiktok-story-downloader" class="group">{t("features.title_story_downloader")}</a> {t("features.tiktok_story_text4")}</p>
+
+	</div>
+	
+</div>
+
+

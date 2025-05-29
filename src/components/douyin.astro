@@ -1,0 +1,130 @@
+
+---
+import Link from "@components/ui/link.astro";
+import { localizePath } from "astro-i18next";
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import { t } from "i18next";
+
+const douyin = [
+	
+];
+---
+
+<section id="services" class="">
+            <div class="container" bis_skin_checked="1">
+                <div class="flex justify-center mx-5" bis_skin_checked="1">
+                    <div class="lg:w-2/3 space-y-5 text-center" bis_skin_checked="1">
+                        <!-- Section Title -->
+                        <h1 class="text-2xl text-gray-800 uppercase tracking-widest dark:text-white">Our Service</h1>
+                        <div class="h-0.5 bg-purple-500 w-14 mx-auto" bis_skin_checked="1"></div>
+                        <p class="text-gray-400 dark:text-gray-300/60">We craft digital, graphic and dimensional thinking, to create category
+                            leading brand experiences that have meaning and add a value for our clients.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-16 mt-12" bis_skin_checked="1">
+                    <!-- Services Card 1 -->
+                    <div class="space-y-6 p-4 text-center group hover:-translate-y-2 transition-all duration-300" bis_skin_checked="1">
+                        <div class="w-16 h-16 leading-loose rounded-full text-4xl text-purple-500 block mx-auto text-center items-center shadow-lg bg-white group-hover:bg-purple-500 group-hover:text-white dark:bg-zinc-900/50" bis_skin_checked="1">
+                            <i class="pe-7s-diamond"></i>
+                        </div>
+                        <h4 class="font-medium dark:text-white">Digital Design</h4>
+                        <p class=" text-gray-400 dark:text-gray-300/60">Some quick example text to build on the card title and make up the bulk of
+                            the card's content. Moltin gives you the platform.</p>
+                    </div>
+
+                    <!-- Services Card 2 -->
+                    <div class="space-y-6 p-4 text-center group hover:-translate-y-2 transition-all duration-300" bis_skin_checked="1">
+                        <div class="w-16 h-16 leading-loose rounded-full text-4xl text-purple-500 block mx-auto text-center items-center shadow-lg bg-white group-hover:bg-purple-500 group-hover:text-white dark:bg-zinc-900/50" bis_skin_checked="1">
+                            <i class="pe-7s-display2"></i>
+                        </div>
+                        <h4 class="font-medium dark:text-white">Unlimited Colors</h4>
+                        <p class=" text-gray-400 dark:text-gray-300/60">Cpurpleibly brand standards compliant users without extensible services.
+                            Anibh euismod tincidunt ut laoreet.</p>
+                    </div>
+
+                    <!-- Services Card 3 -->
+                    <div class="space-y-6 p-4 text-center group hover:-translate-y-2 transition-all duration-300" bis_skin_checked="1">
+                        <div class="w-16 h-16 leading-loose rounded-full text-4xl text-purple-500 block mx-auto text-center items-center shadow-lg bg-white group-hover:bg-purple-500 group-hover:text-white dark:bg-zinc-900/50" bis_skin_checked="1">
+                            <i class="pe-7s-piggy"></i>
+                        </div>
+                        <h4 class="font-medium dark:text-white">Strategy Solutions</h4>
+                        <p class=" text-gray-400 dark:text-gray-300/60">Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                            a large language ocean necessary regelialia.</p>
+                    </div>
+
+                    <!-- Services Card 4 -->
+                    <div class="space-y-6 p-4 text-center group hover:-translate-y-2 transition-all duration-300" bis_skin_checked="1">
+                        <div class="w-16 h-16 leading-loose rounded-full text-4xl text-purple-500 block mx-auto text-center items-center shadow-lg bg-white group-hover:bg-purple-500 group-hover:text-white dark:bg-zinc-900/50" bis_skin_checked="1">
+                            <i class="pe-7s-science"></i>
+                        </div>
+                        <h4 class="font-medium dark:text-white">Awesome Support</h4>
+                        <p class=" text-gray-400 dark:text-gray-300/60">It is a paradisematic country, in which roasted parts of sentences fly
+                            into your mouth leave for the far World.</p>
+                    </div>
+
+                    <!-- Services Card 5 -->
+                    <div class="space-y-6 p-4 text-center group hover:-translate-y-2 transition-all duration-300" bis_skin_checked="1">
+                        <div class="w-16 h-16 leading-loose rounded-full text-4xl text-purple-500 block mx-auto text-center items-center shadow-lg bg-white group-hover:bg-purple-500 group-hover:text-white dark:bg-zinc-900/50" bis_skin_checked="1">
+                            <i class="pe-7s-news-paper"></i>
+                        </div>
+                        <h4 class="font-medium dark:text-white">Truly Multipurpose</h4>
+                        <p class=" text-gray-400 dark:text-gray-300/60">Even the all-powerful Pointing has no control about the blind texts it is
+                            an almost unorthographic.</p>
+                    </div>
+
+                    <!-- Services Card 6 -->
+                    <div class="space-y-6 p-4 text-center group hover:-translate-y-2 transition-all duration-300" bis_skin_checked="1">
+                        <div class="w-16 h-16 leading-loose rounded-full text-4xl text-purple-500 block mx-auto text-center items-center shadow-lg bg-white group-hover:bg-purple-500 group-hover:text-white dark:bg-zinc-900/50" bis_skin_checked="1">
+                            <i class="pe-7s-plane"></i>
+                        </div>
+                        <h4 class="font-medium dark:text-white">Easy to customize</h4>
+                        <p class=" text-gray-400 dark:text-gray-300/60">Question Marks and devious Semikoli, but the Little Blind Text didn’t
+                            listen. She packed her seven versalia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+<div class="relative mx-auto max-w-5xl px-6 lg:px-8">
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.subtitle")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white"><a href="/" class="group">{t("hero.tiktokio")}</a> {t("features.titlepg")}</p>
+	</div>
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.title_mp3_down")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.tiktok_mp3_text1")} <a href="/tiktok-mp3" class="group">{t("features.title_mp3_downloader")}</a> {t("features.tiktok_mp3_text2")}</p>
+	</div>
+	<ul class="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
+      		<li class="rounded-xl bg-white px-6 py-2 shadow-sm"><a href="/" class="group"><img src="/images/video.svg" alt="tiktokio video" class="mx-auto h-10 w-10"><p class="my-3 font-display font-medium">Download Tiktok Videos</p></a></li>
+	        <li class="rounded-xl bg-white px-6 py-2 shadow-sm"><a href="/" class="group"><img src="/images/image.svg" alt="tiktok photos" class="mx-auto h-10 w-10"><p class="my-3 font-display font-medium">Download Tiktok photos</p></a></li>
+		<li class="rounded-xl bg-white px-6 py-2 shadow-sm"><a href="/" class="group"><img src="/images/playlist.svg" alt="mp3 playlist" class="mx-auto h-10 w-10"><p class="my-3 font-display font-medium">Download Tiktok MP3</p></a></li>
+	</ul>
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.title")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.description")} <a href="/" class="group">{t("header.tvd")}</a> {t("features.descriptions")}</p>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.description1")}</p>
+	</div>
+	<div class="mx-auto w-full max-w-5xl px-5 pt-3 mb-8 text-center">
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.description_title")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.heading2_des1")} <a href="/" class="group">{t("features.format_text_link")}</a> {t("features.heading2_des1_1")}</p>
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.heading2")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.heading2_des2")}</p>
+
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.title_photo_down")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.tiktok_photo_text1")} <a href="/download-tiktok-photo" class="group">{t("features.title_photo_downloader")}</a> {t("features.tiktok_photo_text2")} <a href="/download-tiktok-photo" class="group">{t("features.title_photo_downloader")}</a></p>
+
+		<h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">{t("features.title_story_down")}</h2>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.tiktok_story_text1")} <a href="/tiktok-story-downloader" class="group">{t("features.title_story_link")}</a> {t("features.tiktok_story_text2")}</p>
+		<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">{t("features.tiktok_story_text3")} <a href="/tiktok-story-downloader" class="group">{t("features.title_story_downloader")}</a> {t("features.tiktok_story_text4")}</p>
+
+	</div>
+	
+</div>
+
+

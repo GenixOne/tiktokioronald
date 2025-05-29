@@ -1,0 +1,196 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import { pwaInfo } from "virtual:pwa-info";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import "@fontsource-variable/inter";
+import { HeadHrefLangs } from "astro-i18next/components";
+import { SEO } from "astro-seo";
+import i18next from "i18next";
+
+export interface Props {
+	title?: string;
+	lang?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+	"/meta/opengraph.webp",
+	Astro.site,
+).toString();
+
+const { title, lang = null } = Astro.props;
+
+const makeTitle = title
+	? `${title} | TikTokio`
+	: "TikTokio - TikTok Downloader - Download TikTok Videos Without Watermark";
+---
+
+<!doctype html>
+<html lang={lang ?? i18next.language}>
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<link rel="icon" href="/pwa-32x32.webp" sizes="32x32" />
+		<link rel="icon" href="/pwa-192x192.webp" sizes="192x192" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon-180x180.webp" />
+		<meta name="msapplication-TileImage" content="/pwa-270x270.webp" />
+  		<link rel="sitemap" href="/sitemap-index.xml" />
+		<meta name="theme-color" content="#ffffff" />
+
+
+
+<script type="application/ld+json"> { "@context": "http://schema.org", "@type": "WebPage", "url": "https://tiktokio.cam", "inLanguage":"en-US", "description": "TikTokio is Tiktok video downloader to online download tiktok videos without watermark easily, download video from tiktok, free download tiktok video in mp4." } </script>
+<script type="application/ld+json"> { "@context": "https://schema.org", "@type": "WebApplication", "name": "Tiktokio", "alternateName": [ "TikTokio - TikTok Video Downloader" ], "image": "https://tiktokio.cam/images/tiktokio-logo.webp", "operatingSystem": "Windows, Linux, iOS, Android, OSX, macOS", "applicationCategory": "UtilitiesApplication", "featureList": [ "TikTokio", "TikTok Video Downloader", "Download Tiktok Videos without watermark", "Download TikTok Videos", "Download Tiktok photos", "Download Douyin Video" ], "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "8173" }, "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" } }</script> 
+<script type="application/ld+json"> { "@context": "http://schema.org", "@type": "WebSite", "@id": "https://tiktokio.cam", "url": "https://tiktokio.cam", "inLanguage": "en", "name": "Tiktokio", "description": "TikTokio is Tiktok video downloader to online download tiktok videos without watermark easily, download video from tiktok, free download tiktok video in mp4.", "mainEntity": { "@type": "WebApplication", "@id": "https://tiktokio.cam/#app", "name": "TikTok Video Downloader", "alternateName": [ "TikTokio - TikTok Video Downloader", "Download TikTok Videos" ], "image": "https://tiktokio.cam/images/tiktokio-logo.webp", "operatingSystem": "Windows, Linux, iOS, Android, OSX, macOS", "applicationCategory": "UtilitiesApplication", "featureList": [ "TikTokio", "TikTok Video Downloader", "Download Tiktok Videos without watermark", "Download TikTok Videos", "Download Tiktok photos", "Download Douyin Video", "Free TikTok Video Downloader" ], "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "8173" },  "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" } } }</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"Tiktokio","url":"https://tiktokio.cam/","logo":"https://tiktokio.cam/images/tiktokio-logo.webp","image":"https://tiktokio.cam/meta/opengraph.png","description":"TikTokio is Tiktok video downloader to online download tiktok videos without watermark easily, download video from tiktok, free download tiktok video in mp4.","email":"help@tiktokio.cam"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is TikTokio Downlaoder?","acceptedAnswer":{"@type":"Answer","text":"TikTokio is an entirely free online Tiktok downloader and users can download TikTok videos on their concerned devices in HD quality and without a watermark with a couple of clicks. Moreover, users can also convert their favorite TikTok videos into MP3 files."}},{"@type":"Question","name":"How to get the TikTok video download link?","acceptedAnswer":{"@type":"Answer","text":"Get the TikTok app open. Select the TikTok video you wish to download, click Share, and then locate the Copy Link button under the Share options. The clipboard is ready for your download URL. For example, the link would look like this https://v.douyin.com/UFLNjnh/ or https://www.tiktok.com/@philandmore/video/6805867805452324102 or https://m.tiktok.com/v/6805867805452324102.html and more..."}},{"@type":"Question","name":"Is installing extensions necessary in order to utilize the Tik Tok Downloader?","acceptedAnswer":{"@type":"Answer","text":"Not at all. All you need is a link to start the TikTok video download process and get rid of the TikTok watermark online. Copy it into the input field, then choose the conversion format. The rest will be handled by our TikTok watermark eradication tool."}},{"@type":"Question","name":"After they are downloaded where are TikTok files saved?","acceptedAnswer":{"@type":"Answer","text":"The default place is typically where files saved from TikTok without trademarks end up. You can manually choose and modify the destination folder for your files in your browser's settings."}},{"@type":"Question","name":"Is a TikTok account required in order to download videos from TikTok?","acceptedAnswer":{"@type":"Answer","text":"Not any TikTok account is not required. With just a link, you may start the TikTok sans watermark download procedure. Just click the Download button after pasting it into the input area at the top of the page. In a matter of seconds, the video will be usable when the watermark is removed by our TikTok download service."}},{"@type":"Question","name":"Is TikTok downloader safe?","acceptedAnswer":{"@type":"Answer","text":"Totally safe we do not ask any information from users. You just need to copy the video link to the toolbar and download it at Tiktokio."}},{"@type":"Question","name":"When I download my video, where is it saved?","acceptedAnswer":{"@type":"Answer","text":"On PCs and Android mobile devices, videos are typically saved in the Downloads folder."}},{"@type":"Question","name":"Is the TikTok Downloader Compatible with All Devices?","acceptedAnswer":{"@type":"Answer","text":"Yes our TikTok video downloader works perfectly on a wide range of devices, such as personal computers PCs, smartphones Android or iOS, tablets, and iPads. Hence, you’re able to download TikTok videos without watermarks on any device you like."}},{"@type":"Question","name":"Does TikTokio offer unlimited TikTok video downloads?","acceptedAnswer":{"@type":"Answer","text":"Yes, there is no limit to downloading Tiktok videos without a watermark."}},{"@type":"Question","name":"Does TikTokio charge money for downloading TikTok Video content without a watermark?","acceptedAnswer":{"@type":"Answer","text":"No, you will not have to pay any money. Without a watermark, all users can download TikTok videos for free."}}]}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tiktokio.cam"
+  },
+  "headline": "TikTokio - TikTok Downloader - Download TikTok Videos Without Watermark",
+  "description": "TikTokio is Tiktok video downloader to online download tiktok videos without watermark easily, download video from tiktok, free download tiktok video in mp4.",
+  "articleBody": "TikTokio - TikTok Video Downloader. Download TikTok Videos in MP3/MP4 & without Watermark. Download TikTok Videos Easily with Tiktokio. TikTokio is Tiktok video downloader to online download tiktok videos without watermark easily, download video from tiktok, free download tiktok video in mp3. With Tiktokio TikTok Downloader Tool, download TiTok videos seamlessly and comfortably on your smartphone for free. TikTokio - TikTok MP3 Audio Downloader
+TikTokio is a simple and quick tool for saving your favorite TikTok videos in MP3 format. Download audio files with the TikTok MP3 Audio Downloader You may save the soundtrack of your favorite TikTok video on any platform including laptops, tablets, PCs and mobile phones.
+
+TikTok Video Downloader Fast, Free & Secure Online Tool
+Of course, it is true that nowadays, the majority of the people are hankering for Tiktok Video Downloader tools. That is why such tools are launched one by one. But their efficiency and results are not up to mark. Some provide average download speed and some slow.
+
+However, to other TikTok downloader tools, people have to pay. So, here are not such devastating things, because our TikTokio developer team does not put our users in oblivion. We have a new TikTok downloader that is free and you can download your favorite videos from TikTok in HD format at fast speed.
+
+TikTokio: TikTok Video Downloader without any Watermark
+It is a clear inkling that TikTokio is an online free download Tiktok Video without a watermark The major purpose of this useful tool is to provide a download facility for TT videos even without a watermark. And, this entire procedure finishes in a couple of seconds.
+
+TikTokio: Free & Versatile TikTok Video Downloader
+Feel free to use our TikTokio on multiple devices such as Android phones, PCs, laptops, tablets, and desktops for free. So, start downloading and saving your desired TikTok videos and share them with other people to create mutual entertaining harmony.
+
+TikTokio - TikTok Slideshow/Photo Downloader
+TikTok Photo downloader (TikTokio) is a free web application for saving publicly uploaded TikTok photographs and slideshows without watermarks or TikTok logos in high qulaity. TikTok Photo downloader TikTok is easily accessible on a variety of devices running various operating systems, including desktop, Android, iOS, Linux, and Windows, and you may download high-quality TikTok photographs to your gallery with TikTok Photo downloader
+
+TikTokio - TikTok Story Downloader
+The TikTok story download website (https://tiktokio.cam/tiktok-story-downloader) allows you to freely download and save intriguing stories from TikTok to your gallery or files. It's completely anonymous because no one knows - all you require is a link to the TikTok story you wish to download without the watermark.
+
+Additionally, Tiktokio - TikTok Story downloader /saver is suitable with all devices. Whether you're on a smartphone, tablet or desktop computer, you can access our tool by searching 'tiktokio' or 'tiktokio.cam' in your browser.
+
+Download TikTok Videos Online Without Watermark
+Downloading TikTok videos is easy. Because you merely need to copy your desired TT video link. Then TikTokio will perform the rest of the function. However, to know about the complete details, read the following steps.
+
+Search the TikTok Video
+Search the TikTok Video and Copy its Link
+On your Android device, explore the TikTok Application, search for your favorite TikTok video, and then play the video. After that select the copy link when you click the share button which is given at the bottom right side of the video page.
+
+Get Started
+Paste the TikTok VideoLink
+First of all, access our website (https://tiktokio.cam) then go to the TikTokio tool and paste the copied link of the video in the specific input section. Simply tap the Download button now.
+
+Get Started
+Paste link in Tiktokio.cam
+Download tiktok video in mp4 format
+Select format to Download TikTok video
+Here, two major choices are available: download Tiktok Video without a watermark or with a watermark. So, select your desired download format.
+
+Get Started
+Why do I need an active TikTok Downloader?
+Well, there may be a number of causes for that Because TikTok downloader is an effective tool and can download TikTok videos without a watermark.
+
+Furthermore, I can share downloaded content with family, friends, and others comfortably. Tiktokio offers to Download Tiktok Videos or with a watermark. So, select your desired download format.
+
+For this, TikTok Downloader appears to be a digital paradise for all content creators. Because they will be able to save their favorite TT videos without TikTok ID or Logo. You also can share downloaded content on different social platforms like Instagram, YouTube Shorts, Facebook, etc.
+
+TikTokio: Simple, Free, and Fast TT Video Downlaoder
+Our TikTokio is the best TT video downloader that is fast, free, and simple. So, download TT videos without watermark in HD quality and save them in MP3 or MP4 formats. TikTokio watermark removal operates good in ISO systems(iPads/iPhones) and Android.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://tiktokio.cam/meta/opengraph.webp",
+    "width": "1899",
+    "height": "1337"
+  },
+  "author": {
+    "@type": "Person",
+    "url": "https://tiktokio.cam",
+    "name": "Sara W Lane"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tiktokio",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tiktokio.cam/images/tiktokio-logo.webp",
+      "width": "250",
+      "height": "60"
+    }
+  },
+  "datePublished": "2024-08-28T13:36:30Z",
+  "dateModified": "2024-12-15T09:00:20Z"
+}
+</script>
+		<HeadHrefLangs />
+		<ViewTransitions />
+
+<!-- Global CSS -->
+		<link rel="stylesheet" href="/index.css" />
+		<SEO title={makeTitle} description="TikTokio is Tiktok video downloader to online download tiktok videos without watermark easily, download video from tiktok, free download tiktok video in mp4."
+			canonical={canonicalURL}
+			openGraph={{
+				basic: {
+					url: canonicalURL,
+					type: "website",
+					title: `TikTokio - TikTok Downloader - Download TikTok Videos Without Watermark`,
+					image: resolvedImageWithDomain,
+				},
+				image: {
+					alt: "TikTokio - TikTok Downloader - Download TikTok Videos Without Watermark",
+				},
+			}}
+		/>
+<!-- Facebook Meta Tags -->
+<meta property="og:title" content="TikTokio - TikTok Downloader - Download TikTok Videos Without Watermark">
+<meta property="og:description" content="TikTokio is Tiktok video downloader to online download tiktok videos without watermark easily, download video from tiktok, free download tiktok video in mp4.">
+<meta property="og:image" content="https://tiktokio.cam/meta/opengraph.webp">
+<meta property="og:url" content="https://tiktokio.cam">
+<meta property="og:site_name" content="TikTokio">
+<meta property="og:type" content="website">
+
+        
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TikTokio - TikTok Downloader - Download TikTok Videos Without Watermark">
+<meta name="twitter:description" content="TikTokio is Tiktok video downloader to online download tiktok videos without watermark easily, download video from tiktok, free download tiktok video in mp4.">
+<meta name="twitter:image" content="https://tiktokio.cam/meta/opengraph.webp">
+
+		<script is:inline>
+			function handleThemeChange() {
+				if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+					document.documentElement.classList.add("dark");
+				} else {
+					document.documentElement.classList.remove("dark");
+				}
+			}
+			handleThemeChange();
+			document.removeEventListener("astro:after-swap", handleThemeChange);
+			document.addEventListener("astro:after-swap", handleThemeChange);
+		</script>
+
+	</head>
+	<body class="dark:bg-stone-950">
+		<Navbar />
+		<slot />
+		<Footer />
+		<style is:global>
+			/* Improve Page speed */
+			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+			img {
+				content-visibility: auto;
+			}
+		</style>
+	</body>
+</html>
