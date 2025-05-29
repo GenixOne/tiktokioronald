@@ -20,22 +20,25 @@ import { toast, Toaster } from "solid-toast";
 
 import { createEffect, createSignal, onCleanup } from "solid-js";
 type Props = {};
-interface TikTokData {
-  status: string | null;
-  result: {
-    type: string | null;
-    author: {
-      avatar: string | null;
-      nickname: string | null;
-    };
-    desc: string | null;
-    videoSD: string | null;
-    videoHD: string | null;
-    video_hd: string | null;
-    videoWatermark: string | null;
-    music: string | null;
-  };
+
+
+interface MusicalDownResponse {
+  status: "success" | "error"
+  message?: string
+  result?: {
+    type: "video" | "image"
+    desc?: string
+    author?: {
+      avatar?: string
+      nickname?: string
+    }
+    music?: string
+    images?: string[]
+    videoHD?: string
+    videoWatermark?: string
+  }
 }
+
 
 function InputScreen({}: Props) {
   const [url, setUrl] = createSignal("");
