@@ -47,8 +47,9 @@ function InputScreen({}: Props) {
     try {
       let res = await fetch(`/api/tik.json?url=${url()}`);
       let json = await res.json();
-      if (json.status == "error") {
-        throw new Error(json.message);
+
+      if (json.status !== "success") {
+  throw new Error(json.error || "Failed to fetch video");
       } else {
         setData(json ?? null);
         loadAd();
@@ -376,22 +377,8 @@ await navigator.permissions
           </div>
 
           <div>
-            <video
-              controls
-              src={
-                data()!.result.videoSD ??
-                data()!.result.videoHD ??
-                data()!.result.videoWatermark ??
-                data()!.result.video_diyoun ??
-                data()!.result.music ??
-                ""
-              }
-              class=" rounded-md shadow-md my-3 w-3/4 mx-auto"
-            ></video>
+      <video controls src={data().result.videoHD || data().result.videoSD} class="mt-4 w-full rounded-md" /><p class="mt-2 text-sm text-gray-500">By {data().result.author.nickname}</p>
 
-            <p class="text-center text-lg font-semibold mx-auto">
-              {data()!.result.desc}
-            </p>
           </div>
 
           <div class="flex flex-col justify-center gap-2 mt-2 rounded-md shadow-md my-3 w-11/12 mx-auto">
