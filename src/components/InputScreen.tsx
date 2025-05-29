@@ -116,20 +116,21 @@ function InputScreen({}: Props) {
             onclick={async (e) => {
               e.preventDefault();
 
-              //ask for permission to access clipboard readText
-              await navigator.permissions
-                .query({ name: "clipboard-read" as any })
-                .then((result) => {
-                  if (result.state == "granted" || result.state == "prompt") {
-                    navigator.clipboard.readText().then((text) => {
-                      setUrl(text);
-                    });
-                  }
-                });
 
-              navigator.clipboard.readText().then((text) => {
-                setUrl(text);
-              });
+
+
+              
+              //ask for permission to access clipboard readText
+await navigator.permissions
+  .query({ name: "clipboard-read" as any })
+  .then(async (result) => {
+    if (result.state === "granted" || result.state === "prompt") {
+      const text = await navigator.clipboard.readText();
+      setUrl(text);
+    }
+  });
+
+              
             }}
             class="absolute inset-y-0 end-0 flex items-center pe-3 dark:text-white"
           >
