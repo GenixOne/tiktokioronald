@@ -37,12 +37,11 @@ export const GET: APIRoute = async ({ request }) => {
         "content-type": "application/json",
       },
     });
-  } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
-      status: 500,
-      headers: {
-        "content-type": "application/json",
-      },
-    });
-  }
+  
+  } catch (error: any) {
+  return new Response(JSON.stringify({ error: error?.message || "Something went wrong" }), {
+    status: 500,
+    headers: { "content-type": "application/json" },
+  });
+}
 };
