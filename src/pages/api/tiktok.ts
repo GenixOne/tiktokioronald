@@ -1,19 +1,23 @@
-// src/pages/api/tiktok.ts
-import type { APIRoute } from "astro";
-import { NextApiRequest, NextApiResponse } from 'next'; // Vercel uses this convention
+export const config = { runtime: 'nodejs' };
+
+import type { APIRoute } from 'astro';
 import tiktok from '@tobyg74/tiktok-api-dl';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const url = req.query.url as string;
+export const GET: APIRoute = async ({ request, url }) => {
+  const tiktokUrl = new URL(request.url).searchParams.get('url');
 
-  if (!url) {
-    return res.status(400).json({ error: 'Missing TikTok URL' });
+  if (!tiktokUrl) {
+    return new Response(JSON.stringify({ error: 'Missing URL' }), {
+      status: 400,
+    });
   }
 
   try {
-    const result = await tiktok(url);
-    res.status(200).json(result);
+    const result = await tiktok(tiktokUrl);
+    return new Response(JSON.stringify(result), { status: 200 });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch TikTok data' });
+    return new Response(JSON.stringify({ error: 'Failed to fetch TikTok data' }), {
+      status: 500,
+    });
   }
-}
+};
