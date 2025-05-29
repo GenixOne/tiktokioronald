@@ -1,0 +1,29 @@
+User-agent: Googlebot
+Allow: /
+
+Disallow: /*/animated/*
+Disallow: /*/login/*
+Disallow: /*/pricing/*
+Disallow: /*/blog/tag/*
+Disallow: /*/blog/category/*
+
+User-agent: Bingbot
+Allow: /
+
+Disallow: /*/animated/*
+Disallow: /*/login/*
+Disallow: /*/pricing/*
+Disallow: /*/blog/tag/*
+Disallow: /*/blog/category/*
+
+
+User-agent: *
+Allow: /
+
+Disallow: /*/animated/*
+Disallow: /*/login/*
+Disallow: /*/pricing/*
+Disallow: /*/blog/tag/*
+Disallow: /*/blog/category/*
+
+Sitemap: https://tiktokio.cam/sitemap-index.xml
