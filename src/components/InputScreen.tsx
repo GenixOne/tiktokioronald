@@ -15,7 +15,7 @@
 // }
 // }
 
-// Path: src/pages/api/tik.json.ts
+// Path: src/pages/api/tiktok.ts
 import { toast, Toaster } from "solid-toast";
 
 import { createEffect, createSignal, onCleanup } from "solid-js";
@@ -47,7 +47,7 @@ function InputScreen({}: Props) {
   let fetchData = async () => {
     setLoading(true);
     try {
-      let res = await fetch(`/api/tik.json?url=${url()}`);
+      let res = await fetch(`/api/tiktok?url=${url()}`);
       let json = await res.json();
       if (json.status == "error") {
         throw new Error(json.message);
