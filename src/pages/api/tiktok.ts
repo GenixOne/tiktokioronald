@@ -1,4 +1,5 @@
 // src/pages/api/tiktok.ts
+import type { APIRoute } from "astro";
 import { NextApiRequest, NextApiResponse } from 'next'; // Vercel uses this convention
 import tiktok from '@tobyg74/tiktok-api-dl';
 
