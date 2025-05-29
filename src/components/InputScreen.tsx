@@ -70,28 +70,7 @@ function InputScreen({}: Props) {
     setLoading(false);
   };
 
-  const loadAd = () => {
-    const script1 = document.createElement("script");
-    script1.id = "aclib";
-    script1.type = "text/javascript";
-    script1.innerHTML = `
-      aclib.runBanner({
-            zoneId: '9480206',
-        });
-    `;
-    document.getElementById("ad-banner")?.appendChild(script1);
-  
-    const script2 = document.createElement("script");
-    script2.type = "text/javascript";
-    script2.src = "//acscdn.com/script/aclib.js";
-    document.getElementById("ad-banner")?.appendChild(script2);
-  };
-  
-
-
-
-
-  return (
+   return (
     <div>
       <Toaster />
 
@@ -393,10 +372,7 @@ function InputScreen({}: Props) {
             </p>
           </div>
 
-          <div class="flex flex-col justify-center gap-2 mt-2 rounded-md shadow-md my-3 w-11/12 mx-auto">
-            <div id="ad-banner" class="flex justify-center"></div>
-          </div>
-
+          
           <div class="flex flex-col justify-center gap-2 mt-2 rounded-md shadow-md my-3 w-11/12 mx-auto">
             {data()!.result.videoSD && (
               <a
