@@ -1,0 +1,24 @@
+---
+import Container from "@components/container.astro";
+import Faq from "@components/faq.astro";
+import Douyin from "@components/douyin.astro";
+import Hero from "@components/herodouyin.astro";
+import Newsletter from "@components/newsletter.astro";
+import Testimonials from "@components/testimonials.astro";
+
+import Layout from "@layouts/Layout.astro";
+import { changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
+changeLanguage("en");
+---
+
+
+<Layout title="Tiktokio - Douyin Video Downloader - Download Douyin Video without Watermark">
+	<main id="main-content">
+
+		<Hero />
+		<Douyin />
+		
+
+    	</main>
+</Layout>
