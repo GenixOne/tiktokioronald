@@ -23,19 +23,18 @@ type Props = {};
 
 
 interface MusicalDownResponse {
-  status: "success" | "error"
-  message?: string
+  status: string | null;
+  message?: string | null;
   result?: {
-    type: "video" | "image"
+    type: string | null;
     desc?: string
     author?: {
-      avatar?: string
-      nickname?: string
+      avatar?: string | null;
+      nickname?: string | null;
     }
-    music?: string
-    images?: string[]
-    videoHD?: string
-    videoWatermark?: string
+    music?: string | null;
+    videoHD?: string | null;
+    videoWatermark?: string | null;
   }
 }
 
@@ -360,7 +359,6 @@ function InputScreen({}: Props) {
             <video
               controls
               src={
-                data()!.result.videoSD ??
                 data()!.result.videoHD ??
                 data()!.result.videoWatermark ??
                 data()!.result.video_diyoun ??
@@ -377,14 +375,7 @@ function InputScreen({}: Props) {
 
           
           <div class="flex flex-col justify-center gap-2 mt-2 rounded-md shadow-md my-3 w-11/12 mx-auto">
-            {data()!.result.videoSD && (
-              <a
-                href={`https://dl.tiktokiocdn.workers.dev/api/download?url=${encodeURIComponent(data()!.result.videoSD ?? "")}&type=.mp4&title=${data()!.result.author?.nickname}`}
-                class="p-2 bg-blue-600 shadow-md h-10 rounded text-white"
-              >
-                Download Video Low Without Watermaker
-              </a>
-            )}
+           
             {data()!.result.videoHD && (
               <a
                 href={`https://dl.tiktokiocdn.workers.dev/api/download?url=${encodeURIComponent(data()!.result.videoHD ?? "")}&type=.mp4&title=${data()!.result.author?.nickname}`}
